@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STAT 515 — Redesign Project (Outputs Only)</title>
+<style>
+  :root {
+    --bg:#0b1220; --card:#111a2b; --ink:#e8eefc; --muted:#9bb0d1; --accent:#6aa7ff;
+    --border:#1a2640;
+  }
+  html,body {margin:0; padding:0; background:var(--bg); color:var(--ink);
+              font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial; }
+  .container { max-width: 1100px; margin: 40px auto; padding: 0 16px; }
+  header { display:flex; flex-direction:column; gap:8px; margin-bottom: 24px; }
+  h1 { margin: 0; font-size: clamp(24px, 4vw, 36px); }
+  .sub { color: var(--muted); font-size: 14px; }
+  a.link { color: var(--accent); text-decoration: none; }
+  a.link:hover { text-decoration: underline; }
+  .grid { display:grid; grid-template-columns: 1fr; gap: 18px; }
+  @media (min-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border:1px solid var(--border);
+           border-radius: 16px; overflow: hidden; box-shadow:0 10px 30px rgba(0,0,0,.25); }
+  figure { margin:0; }
+  img { width: 100%; height: auto; display: block; }
+  .meta { padding: 14px 16px 18px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: 12px; color: var(--muted); }
+  h2 { margin: 6px 0 8px; font-size: 20px; }
+  .p { margin: 0; color: var(--muted); line-height: 1.5; }
+  footer { margin-top: 26px; color: var(--muted); font-size: 12px; }
+  .badge { display:inline-block; padding:4px 8px; border-radius:999px; font-size:12px;
+            border:1px solid var(--border); background:#0e1730; color:var(--ink); }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>STAT 515 — Redesign Project (Outputs Only)</h1>
+      <div class="sub">
+        <span class="badge">Author: Vakati Rutvij Reddy</span>
+        <span class="badge">Date: October 20, 2025</span>
+      </div>
+      <div class="sub">
+        Full project with code: <a class="link" href="https://<your-original-site-url>" target="_blank" rel="noopener">View the original analysis website</a>
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <article class="card">
+        <figure>
+          <img src="00001e.png" alt="Original figure: Unemployment rate by sex, EU, 2015–2024">
+        </figure>
+        <div class="meta">
+          <div class="eyebrow">Original Chart</div>
+          <h2>Unemployment rate by sex, EU, 2015–2024</h2>
+          <p class="p"><strong>Issue noted:</strong> Visual hierarchy not optimal — gridlines dominate over the data; color pairing can reduce contrast for some viewers, and the focus of the narrative is unclear.</p>
+          <p class="p"><em>Goal of redesigns:</em> improve comparison, strengthen focus, and reduce non‑data ink.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure>
+          <img src="000016.png" alt="Redesign 1: Unemployment rate by sex — 2024, EU countries">
+        </figure>
+        <div class="meta">
+          <div class="eyebrow">Redesign A</div>
+          <h2>Country comparison for 2024 (by sex)</h2>
+          <p class="p">Switches to a sorted horizontal bar chart to emphasize <strong>rank and magnitude</strong> across countries. Legibility is improved, and comparisons between male and female rates are more direct.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure>
+          <img src="000026.png" alt="Redesign 2: Long-term unemployment (2015–2024), top 12 countries">
+        </figure>
+        <div class="meta">
+          <div class="eyebrow">Redesign B</div>
+          <h2>Long‑term unemployment (≥12 months)</h2>
+          <p class="p">Uses small multiples to show <strong>change over time</strong> for the top 12 countries by 2024 value. The layout reduces overplotting and lets readers scan trends quickly.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <footer>
+      Source images generated from Eurostat (une_rt_a, une_ltu_a). This page only displays visualization outputs.
+    </footer>
+  </div>
+</body>
+</html>
